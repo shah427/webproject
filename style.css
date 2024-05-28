@@ -1,0 +1,480 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.background-container {
+    background: url('background.jpg') no-repeat center center;
+    background-size: cover;
+    height: 785px; 
+    position: relative;
+}
+
+header {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.9); 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: center; 
+}
+
+.nav-links li {
+    margin-right: 20px;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #2ecc71;
+    border-bottom: 3px solid #2ecc71;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 10px; 
+}
+
+#unit-area {
+    margin-right: 5px; 
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+#unit-area:hover {
+    border-color: #2ecc71;
+}
+
+.login-icon {
+    color: #333;
+    font-size: 20px;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.login-icon:hover {
+    color: #2ecc71;
+}
+
+.post-property {
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    color: #fff;
+    padding: 10px 15px; 
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    transition: background 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.post-property:hover {
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+    transform: scale(1.05);
+}
+
+.free-badge {
+    background-color: #fff;
+    color: #2ecc71;
+    font-size: 12px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    border: 1px solid #2ecc71;
+    white-space: nowrap; 
+}
+
+.post-property:hover .free-badge {
+    background-color: #2ecc71;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 0; 
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    height: 100%; 
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    background: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.tab.active {
+    background: #2ecc71;
+    color: #fff;
+}
+
+.tab:hover:not(.active) {
+    background: #ddd;
+}
+
+.search-fields {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.search-fields input {
+    flex: 1;
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-btn {
+    background: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.search-btn:hover {
+    background: #27ae60;
+}
+
+.more-filters {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.more-filters:hover {
+    background: #f1f1f1;
+}
+
+.services-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+    margin-bottom: 50px; 
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 30%;
+}
+
+.service-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.service-card h3 {
+    font-size: 24px;
+    margin: 20px 0 10px;
+    color: #333;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.service-button {
+    background: #2ecc71;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.service-button:hover {
+    background: #27ae60;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .nav-actions {
+        display: none;
+    }
+
+    .hero-section h1 {
+        font-size: 28px;
+    }
+
+    .search-fields {
+        flex-direction: column;
+    }
+
+    .search-fields input,
+    .search-btn,
+    .more-filters {
+        margin: 5px 0;
+        width: 100%;
+    }
+
+    .services-section {
+        flex-direction: column;
+    }
+
+    .service-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+
+.homes-section {
+    margin-top: 375px; 
+}
+
+.home-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px; 
+    box-sizing: border-box;
+}
+
+.home-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.home-card h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.home-card p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.swiper-container {
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden; 
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    margin-right: 5px; 
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #2ecc71; 
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 1, 1, 0.8);
+    box-shadow: 0 2px 4px rgba(18, 255, 81, 0.845);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.swiper-button-next {
+    right: 10px; 
+}
+
+.swiper-button-prev {
+    left: 10px; 
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+/* Property Form Styling */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 100px auto 20px auto; 
+    border: 1px solid #ddd; 
+}
+
+form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2ecc71;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #218838;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+/* Other CSS remains unchanged */
+
+/* Home Details Styling */
+.home-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    margin-top: 70px; /* Adjust to ensure it's below the navbar */
+}
+
+.home-details .home-card {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.home-details .home-card .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.home-details .home-card .image-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

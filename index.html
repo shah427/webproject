@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeHaven</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <div class="background-container">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="logo.png" alt="Real Property Logo" class="logo-img">
+                    <span class="logo-text">Home Haven</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">Buy</a></li>
+                    <li><a href="#">Rent</a></li>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <select id="unit-area" name="unit-area">
+                        <option value="marla">Unit Area: Marla</option>
+                        <option value="kanal">Unit Area: Kanal</option>
+                    </select>
+                    <a href="#" class="login-icon"><i class="fa fa-user"></i></a>
+                    <a href="post_property.html" class="post-property">Post Property <span class="free-badge">Free</span></a>
+                </div>
+            </nav>
+    
+            <div class="hero-section">
+                <h1>Properties For Sale & Rent In Pakistan</h1>
+                <div class="search-bar">
+                    <div class="tabs">
+                        <button class="tab active">Buy</button>
+                        <button class="tab">Rent</button>
+                    </div>
+                    <div class="search-fields">
+                        <input type="text" placeholder="Select City">
+                        <input type="text" placeholder="Locations">
+                        <button class="search-btn">Search</button>
+                        <button class="more-filters">More Filters</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="services-section">
+            <div class="service-card">
+                <img src="buy.png" alt="Buy a property">
+                <h3>Buy a property</h3>
+                <p>Find where “perfect” meets “happy”</p>
+                <button class="service-button">BROWSE PROPERTIES</button>
+            </div>
+            <div class="service-card">
+                <img src="sell.png" alt="Sell a property">
+                <h3>Sell a property</h3>
+                <p>Get the best value in any economy</p>
+                <button class="service-button">ADD DETAILS</button>
+            </div>
+            <div class="service-card">
+                <img src="rent.png" alt="Rent a property">
+                <h3>Rent a property</h3>
+                <p>Live where you can love</p>
+                <button class="service-button">FIND RENTALS</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="homes-section" id="homes-section">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Homes will be dynamically added here -->
+            </div>
+          
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
